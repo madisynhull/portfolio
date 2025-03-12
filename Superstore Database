@@ -1,0 +1,24 @@
+SELECT *
+FROM superstore
+LIMIT 5;
+
+#For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices. 
+
+#Use a SELECT statement to order the items by price.
+SELECT price, item_name
+FROM superstore
+ORDER BY price desc;
+
+SELECT COUNT(item_name)
+FROM superstore
+WHERE item_name="Memory Foam Mattress";
+
+#Show a statistic about the price for items in the category of "Kitchen Supplies".
+SELECT AVG(price)
+FROM superstore
+WHERE category="Kitchen Supplies";
+
+#Show how many Slow Cookers are in stock.
+SELECT stock_quantity
+FROM superstore
+WHERE item_name="Slow Cooker";
